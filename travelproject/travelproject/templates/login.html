@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <style>
+    .log{
+       background-color:MediumAquamarine;
+        height: 300px;
+        width: 600px;
+        position: relative;
+        border: 3px solid green;
+        text-align:center;
+        padding:10px;
+        margin: auto;
+
+        }
+
+    </style>
+</head>
+<body><br><br><br><br><br><br><br><br><br>
+<div class="log">
+    <h1 style="background-color:Olive">Login</h1><br><br>
+<form action="login" method="post">
+  {% csrf_token %}
+  Username: <input type="text" name="username" placeholder="Username"><br><br>
+    Password: <input type="password" name="password" placeholder="Enter your password"><br><br>
+   <button style="background-color:gold">Login </button>
+
+</form>
+</div>
+</body>
+</html>

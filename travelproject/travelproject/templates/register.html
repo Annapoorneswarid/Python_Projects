@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+    <style>
+        .reg{
+       background-color:Lavender;
+        height: 400px;
+        width: 600px;
+        position: relative;
+        border: 3px solid green;
+        text-align:center;
+        padding:10px;
+        margin: auto;
+
+        }
+
+
+    </style>
+</head>
+<body ><br><br><br><br><br><br><br><br>
+<div class="reg" >
+<h1 style="background-color:tomato">Registration</h1><br>
+
+<form action="register" method="post"  >
+    {% csrf_token %}
+    Username: <input type="text" name="username" placeholder="Username"><br><br>
+        First Name: <input type="text" name="first_name" placeholder="Enter your first name"><br><br>
+        Last Name: <input type="text" name="last_name" placeholder="Enter your last name"><br><br>
+    Email: <input type="email" name="email" placeholder="Enter your email"><br><br>
+    Password: <input type="password" name="password" placeholder="Enter your password"><br><br>
+    Confirm Password: <input type="password" name="password1" placeholder="Confirm passworm"><br><br>
+    <button style="background-color:gold">Register</button>
+
+
+</form>
+{% for msg in messages %}
+<h2>{{msg}}</h2>
+{% endfor %}
+</div>
+</body>
+</html>
