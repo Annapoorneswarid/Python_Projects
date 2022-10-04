@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<br>
+<div >
+  <h3 style="background-color:yellow"> Edit Movie List</h3>
+<form method="POST" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{form.as_p}}<br>
+  <button>Update</button>
+
+
+</form>
+  </div>
+{% endblock %}
+

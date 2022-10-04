@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block body %}
+<style>
+  .in{
+  text-align:center;
+  height: 400px;
+        width: 600px;
+        position: relative;
+        border: 3px solid green;
+
+        padding:10px;
+        margin: auto;
+  }
+</style>
+
+<br><br><br>
+<div class="in">
+  <h1 style="background-color:yellow">Movie List</h1><br><br>
+<form method="POST" enctype="multipart/form-data">
+  {% csrf_token %}
+  Movie name: <input type="text" name="name" placeholder="Enter a Movie name"><br><br>
+    Description: <input type="text" name="desc" placeholder="Enter a Movie Description"><br><br>
+ Year:  <input type="text" name="year" placeholder="Enter a Movie year"><br><br>
+ Upload Image:  <input type="file" name="img" ><br><br>
+  <button>Submit</button>
+
+</form>
+  </div>
+{% endblock %}
+
